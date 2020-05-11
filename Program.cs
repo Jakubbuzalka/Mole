@@ -6,14 +6,16 @@ namespace Calc
     {
         static void Main(string[] args)
         {
-            int zadanie = 1;
+            int zadanie = 0;
 
-            void ui()
+            Console.WriteLine("Hi human tell me do you want task [10] or [11] ?");
+            try
             {
-                Console.WriteLine("Hi human gib weight.");
-                Mol mol = new Mol();
-                mol.weight = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("Weight of one is :" + "\n" + Convert.ToString(mol.WeightOfOne()));
+                zadanie = Convert.ToInt32(Console.ReadLine());
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Input must be positive integer !");
             }
             
             
@@ -43,9 +45,7 @@ namespace Calc
     
             switch (zadanie)
             {
-                case 0:
-                    ui();
-                    break;
+                
 
                 case 11:
                     double vaha = (((24.3 / cys.WeightOfOne()) - 1) * water.WeightOfOne());
