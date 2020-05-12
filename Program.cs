@@ -8,7 +8,7 @@ namespace Calc
         {
             int zadanie = 0;
 
-            Console.WriteLine("Hi human tell me do you want task [10] or [11] ?");
+            Console.WriteLine("Hi human tell me do you want task [10] or [11] or [12] ?");
             try
             {
                 zadanie = Convert.ToInt32(Console.ReadLine());
@@ -35,20 +35,19 @@ namespace Calc
             sulfur.weight = 32.065;
 
             cys.weight = carbon.weight * 3 + hydro.weight * 7 + nitro.weight + sulfur.weight + oxygen.weight * 2;
+            cys.density = 1000;
+           
             water.weight = hydro.weight * 2 + oxygen.weight;
 
-            
-
             // c3 h7 no2 s
-
              
-    
             switch (zadanie)
             {
                 
 
                 case 11:
-                    double vaha = (((24.3 / cys.WeightOfOne()) - 1) * water.WeightOfOne());
+                    double vaha = ((24.3 / cys.WeightOfOne()) - 1) * water.WeightOfOne();
+                    
                     Console.WriteLine(vaha);
                     break;
 
@@ -57,6 +56,13 @@ namespace Calc
                     double result = 0.000126 / meta - 1;
 
                     Console.WriteLine(result);
+                    break;
+
+                case 12:
+                    double numberOfMolecules = 24.3 / cys.WeightOfOne();
+                    double hairLenght = cys.Lenght() * numberOfMolecules/ Math.Pow(10, 10);
+
+                    Console.WriteLine(hairLenght);
                     break;
 
                 default:
