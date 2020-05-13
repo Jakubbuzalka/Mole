@@ -37,6 +37,7 @@ namespace Calc
             cys.weight = carbon.weight * 3 + hydro.weight * 7 + nitro.weight + sulfur.weight + oxygen.weight * 2;
             cys.density = 1000;
            
+           
             water.weight = hydro.weight * 2 + oxygen.weight;
 
             // c3 h7 no2 s
@@ -59,14 +60,19 @@ namespace Calc
                     break;
 
                 case 12:
+                    double avg = 6.022 * Math.Pow(10, 15);
+                    
+
                     double numberOfMolecules = 24.3 / cys.WeightOfOne();
-                    double hairLenght = cys.Lenght() * numberOfMolecules/ Math.Pow(10, 10);
+                    double hairLenght = cys.Lenght() * numberOfMolecules;
 
                     Console.WriteLine(hairLenght);
+        
                     break;
 
                 default:
                     Console.ReadLine();
+                    
                     break;
             }
 

@@ -18,13 +18,6 @@ namespace Calc
 
             return result;
         }
-        public double WeightOfMole()
-        {
-            double result;
-            result = weight * avgConst;
-
-            return result;
-        }
         public double Volume()
         {
             double result;
