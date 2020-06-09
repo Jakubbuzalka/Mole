@@ -76,7 +76,7 @@ namespace Calc
                     break;
             }
 
-    
+          
 
         }
 
